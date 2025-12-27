@@ -1,0 +1,239 @@
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Tajawal:wght@400;500;700&family=Amiri&family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Background Decorations -->
+  <div id="snowfall"></div>
+  <div id="confetti-container"></div>
+  <div id="bg-decorations"></div>
+
+  <!-- Password Page -->
+  <div id="password-page" class="page active">
+    <!-- Cute Balloons -->
+    <div class="balloon top-left" style="animation-delay: 0s;">
+      <div class="balloon-body lavender"><div class="balloon-shine"></div><div class="balloon-knot"></div></div>
+      <svg class="balloon-string" width="20" height="60"><path d="M10 0 Q5 20 10 30 Q15 40 10 60" fill="none" stroke="rgba(200,180,220,0.6)" stroke-width="1"/></svg>
+    </div>
+    <div class="balloon top-right" style="animation-delay: 0.5s;">
+      <div class="balloon-body mauve"><div class="balloon-shine"></div><div class="balloon-knot"></div></div>
+      <svg class="balloon-string" width="20" height="60"><path d="M10 0 Q5 20 10 30 Q15 40 10 60" fill="none" stroke="rgba(200,180,220,0.6)" stroke-width="1"/></svg>
+    </div>
+    <div class="balloon bottom-left" style="animation-delay: 1s;">
+      <div class="balloon-body beige"><div class="balloon-shine"></div><div class="balloon-knot"></div></div>
+      <svg class="balloon-string" width="20" height="60"><path d="M10 0 Q5 20 10 30 Q15 40 10 60" fill="none" stroke="rgba(200,180,220,0.6)" stroke-width="1"/></svg>
+    </div>
+    <div class="balloon bottom-right" style="animation-delay: 1.5s;">
+      <div class="balloon-body rose"><div class="balloon-shine"></div><div class="balloon-knot"></div></div>
+      <svg class="balloon-string" width="20" height="60"><path d="M10 0 Q5 20 10 30 Q15 40 10 60" fill="none" stroke="rgba(200,180,220,0.6)" stroke-width="1"/></svg>
+    </div>
+
+    <div class="card">
+      <span class="corner-deco top-left">✨</span>
+      <span class="corner-deco top-right">🌙</span>
+      <span class="corner-deco bottom-left">💜</span>
+      <span class="corner-deco bottom-right">⭐</span>
+      
+      <div class="lights-container">
+        <div class="light lavender"></div>
+        <div class="light mauve" style="animation-delay: 0.2s;"></div>
+        <div class="light beige" style="animation-delay: 0.4s;"></div>
+        <div class="light rose" style="animation-delay: 0.6s;"></div>
+        <div class="light lavender" style="animation-delay: 0.8s;"></div>
+        <div class="light mauve" style="animation-delay: 1s;"></div>
+        <div class="light beige" style="animation-delay: 1.2s;"></div>
+      </div>
+
+      <div class="countdown">
+        <p class="countdown-title">🎄 Christmas Countdown 🎄</p>
+        <div class="countdown-boxes">
+          <div class="countdown-box"><span id="days">00</span><small>D</small></div>
+          <div class="countdown-box"><span id="hours">00</span><small>H</small></div>
+          <div class="countdown-box"><span id="minutes">00</span><small>M</small></div>
+          <div class="countdown-box"><span id="seconds">00</span><small>S</small></div>
+        </div>
+      </div>
+
+      <h2 class="title">✨ Enter Password ✨</h2>
+      <input type="password" id="password-input" class="input" placeholder="Enter your secret...">
+      <p id="error-msg" class="error hidden">Wrong password! Try again 💜</p>
+      <button id="unlock-btn" class="btn">🔓 Unlock</button>
+    </div>
+  </div>
+
+  <!-- Letter Page - Tree -->
+  <div id="letter-page" class="page">
+    <div id="tree-section">
+      <p style="font-family: 'Amiri', serif; font-size: 1.5rem; color: var(--beige); margin-bottom: 1.5rem; text-shadow: 0 0 20px hsla(35,45%,85%,0.5);">✨ اضغط على الشجرة ✨</p>
+      
+      <div class="tree-container" id="christmas-tree">
+        <div class="tree">
+          <div class="tree-star">⭐</div>
+          <div class="tree-layer tree-layer-1"></div>
+          <div class="tree-layer tree-layer-2"></div>
+          <div class="tree-layer tree-layer-3"></div>
+          <div class="tree-trunk"></div>
+          <!-- Ornaments with soft colors -->
+          <div class="tree-ornament" style="background: var(--rose); color: var(--rose); top: 30px; left: 35px;"></div>
+          <div class="tree-ornament" style="background: var(--beige); color: var(--beige); top: 45px; right: 40px;"></div>
+          <div class="tree-ornament" style="background: var(--lavender); color: var(--lavender); top: 70px; left: 25px;"></div>
+          <div class="tree-ornament" style="background: var(--mauve); color: var(--mauve); top: 85px; right: 30px;"></div>
+          <div class="tree-ornament" style="background: var(--soft-purple); color: var(--soft-purple); top: 110px; left: 45px;"></div>
+          <div class="tree-ornament" style="background: var(--rose); color: var(--rose); top: 125px; right: 50px;"></div>
+        </div>
+      </div>
+      
+      <p class="click-hint">💜 اضغط لفتح الرسالة 💜</p>
+    </div>
+
+    <div id="letter-section" class="hidden">
+      <div class="card" style="max-width: 600px;">
+        <span class="corner-deco top-left">💜</span>
+        <span class="corner-deco top-right">✨</span>
+        <span class="corner-deco bottom-left">⭐</span>
+        <span class="corner-deco bottom-right">🌙</span>
+        
+        <div class="lights-container">
+          <div class="light lavender"></div>
+          <div class="light mauve" style="animation-delay: 0.15s;"></div>
+          <div class="light beige" style="animation-delay: 0.3s;"></div>
+          <div class="light rose" style="animation-delay: 0.45s;"></div>
+          <div class="light lavender" style="animation-delay: 0.6s;"></div>
+          <div class="light mauve" style="animation-delay: 0.75s;"></div>
+          <div class="light beige" style="animation-delay: 0.9s;"></div>
+          <div class="light rose" style="animation-delay: 1.05s;"></div>
+          <div class="light lavender" style="animation-delay: 1.2s;"></div>
+        </div>
+        <p class="letter-text">
+       ياسمين، مش عارف أبدأ منين بس حاسس إن وجودك في حياتي فرق معايا أكتر ما كنت متخيل. إنتي مش مجرد حد بحبه وخلاص، إنتي راحة، وإنتي أمان، وإحساس حلو بييجي من غير مجهود. وجودك جنبي بيخليني أهدى، أرتب دماغي، وأبقى أحسن من غير ما تحاولي تعملي حاجة.
+بحبك عشان على طبيعتك، بعفويتك، بطريقتك اللي بتدخل القلب من غير استئذان. بحب إنك دايمًا فاهمة، وبتعرفي تسمعي، وبتحسي قبل ما أتكلم. في وقت كتير ببقى متلخبط أو ساكت، وإنتي بتفهمي السكوت قبل الكلام، وده لوحده نعمة.
+ممتن ليكي على كل لحظة كنتي فيها جنبي، على الضحكة، على الدعم، على إنك موجودة حتى في الأيام اللي مكنتش خفيف فيها. بحترمك وبقدّرك وبشوف فيكي حاجة كبيرة، حاجة تخليني فخور إنك في حياتي.
+يمكن مش دايمًا بعرف أعبّر صح، بس صدقيني إحساسي ناحيتك حقيقي، ووجودك فرق معايا بجد. بحبك مش عشان حاجة معينة، بحبك عشان إنتي ياسمين… وده كفاية.
+        </p>
+        <div class="heart-counter">
+          <p style="color: hsla(35,40%,90%,0.6); font-size: 0.9rem; margin-bottom: 0.5rem;">💜 اضغط على القلب 💜</p>
+          <button class="heart-btn" id="heart-btn">💜</button>
+          <p class="heart-count"><span id="heart-count">0</span> Hearts</p>
+        </div>
+
+        <button class="btn" onclick="navigateTo('memories-page')">Next ✨</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Memories Page -->
+  <div id="memories-page" class="page">
+    <h1 class="memories-title">✨ Our Memories ✨</h1>
+
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/J9n07OdPiA8" title="Our Song" allowfullscreen></iframe>
+    </div>
+
+    <div class="carousel">
+      <img id="carousel-img" src="https://i.ibb.co/DfK58MRM/Whats-App-Image-2025-12-06-at-20-45-05-ffec2ac0.jpg" alt="Memory">
+    </div>
+
+    <div class="carousel-dots" id="carousel-dots"></div>
+
+    <div class="love-timer" id="love-timer"></div>
+
+    <div class="love-message-box">
+      <p class="love-message" id="love-message">💜 أنتِ أجمل شيء حصل في حياتي 💜</p>
+    </div>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <span>✨</span>
+      <span>💜</span>
+      <span>⭐</span>
+      <span>💜</span>
+      <span>✨</span>
+    </div>
+
+    <!-- Cute Quote -->
+    <div class="quote-section">
+      <p class="quote-text">الحب هو إنك تلاقي بيتك في قلب حد تاني</p>
+    </div>
+
+    <!-- Fun Facts Bubbles -->
+    <div class="facts-section">
+      <div class="fact-bubble">
+        <span class="fact-icon"></span>
+        <span class="fact-text">قلبي اختارك</span>
+      </div>
+      <div class="fact-bubble">
+        <span class="fact-icon"></span>
+        <span class="fact-text">كل سنة وإحنا سوا</span>
+      </div>
+      <div class="fact-bubble">
+        <span class="fact-icon"></span>
+        <span class="fact-text">دايمًا جنبك</span>
+      </div>
+      <div class="fact-bubble">
+        <span class="fact-icon"></span>
+        <span class="fact-text">بيتي في قلبك</span>
+      </div>
+    </div>
+
+    <!-- Wishes Section -->
+    <div class="wishes-section">
+      <h3 class="wishes-title">💜 أمنياتي ليكي 💜</h3>
+      <div class="wish-item" style="animation-delay: 0.1s;">
+        <span class="wish-icon">💫</span>
+        <span class="wish-text">تفضلي دايمًا مبسوطة ومرتاحة</span>
+      </div>
+      <div class="wish-item" style="animation-delay: 0.2s;">
+        <span class="wish-icon">🌟</span>
+        <span class="wish-text">تحققي كل أحلامك وأهدافك</span>
+      </div>
+      <div class="wish-item" style="animation-delay: 0.3s;">
+        <span class="wish-icon">🎄</span>
+        <span class="wish-text">نقضي كل كريسماس مع بعض</span>
+      </div>
+      <div class="wish-item" style="animation-delay: 0.4s;">
+        <span class="wish-icon">💜</span>
+        <span class="wish-text">حبنا يفضل قوي ويكبر كل يوم</span>
+      </div>
+      <div class="wish-item" style="animation-delay: 0.5s;">
+        <span class="wish-icon">🌸</span>
+        <span class="wish-text">نفضل سند لبعض طول العمر</span>
+      </div>
+    </div>
+
+    <!-- Promise Cards -->
+    <div class="promises-section">
+      <div class="promise-card">
+        <div class="promise-icon">👥</div>
+        <p class="promise-text">هفضل جنبك دايمًا</p>
+      </div>
+      <div class="promise-card">
+        <div class="promise-icon">👸🏻</div>
+        <p class="promise-text">هسندك في كل وقت</p>
+      </div>
+      <div class="promise-card">
+        <div class="promise-icon">😊</div>
+        <p class="promise-text">هخليكي مبسوطة</p>
+      </div>
+      <div class="promise-card">
+        <div class="promise-icon">🏠</div>
+        <p class="promise-text">هبني معاكي بيتنا</p>
+      </div>
+    </div>
+
+    <button class="btn" onclick="navigateTo('ending-page')">Next ✨</button>
+  </div>
+
+  <!-- Ending Page -->
+  <div id="ending-page" class="page">
+    <h1 class="ending-title" id="ending-title" style="opacity: 0;">💜 ياسمين حبيبتي 💜</h1>
+    <p class="ending-text" id="ending-text-1" style="opacity: 0;">مهما الدنيا ودتنا فين...</p>
+    <p class="ending-text" id="ending-text-2" style="opacity: 0;">هتفضلي إنتي أغلى حد عندي،</p>
+    <p class="ending-text" id="ending-text-3" style="opacity: 0;">أماني وبيتي اللي برتاح فيه 💜</p>
+
+    <div class="christmas-message" id="christmas-msg" style="opacity: 0;">
+      <p>✨ Merry Christmas, My Love ✨</p>
+    </div>
+
+    <button class="btn btn-gold" id="replay-btn" style="opacity: 0; max-width: 200px;" onclick="replay()">🔄 agaim</button>
+
+    <p class="designer-text" id="designer-text" style="opacity: 0;">💜 Designed with love by omar 💜</p>
+  </div>
