@@ -154,7 +154,7 @@
 
     // Image Carousel
     const images = [
-      'https://i.ibb.co/C5Rqvs6X/Whats-App-Image-2025-12-27-at-10-34-08-PM.jpg',
+      '',
       'https://i.ibb.co/RktXR63z/Whats-App-Image-2025-12-27-at-10-34-55-PM.jpg',
     ];
     let currentSlide = 0;
@@ -261,4 +261,5 @@
       navigateTo('password-page');
 
     }
+
 
